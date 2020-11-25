@@ -1,4 +1,6 @@
 const settingsForm = document.getElementById('settings-form')
+const nav = document.getElementById('nav')
+
 // get settings
 ipcRenderer.on('settings:get', (e, settings) => {
   document.getElementById('cpu-overload').value = settings.cpuOverload
@@ -29,3 +31,8 @@ function showAlert(msg) {
     alert.classList.add('hide')
   }, 3000)
 }
+
+// Toggle Nav
+ipcRenderer.on('nav:toggle', () => {
+  nav.classList.toggle('hide')
+})

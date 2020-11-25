@@ -7,7 +7,7 @@ const MainWindow = require('./MainWindow')
 const AppTray = require('./AppTray')
 
 // Set env
-process.env.NODE_ENV = 'produciton'
+process.env.NODE_ENV = 'production'
 
 let mainWindow
 let tray
